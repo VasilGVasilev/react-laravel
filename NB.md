@@ -12,3 +12,7 @@ auto import not working on vite -> setup a jsconfig.json file
 **react-router-dom**
 
 creating routes via <RouterProvider router={router} />, for each route with children, put <Outlet /> in this very component
+
+**debugger**
+
+simply putting debbuger keyword in code and running app in chrome will show you values in Sources when hovering
