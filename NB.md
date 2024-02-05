@@ -8,3 +8,7 @@ Laravel comes with vite config, but this config is to have a tight coupled BE an
 **auto import**
 
 auto import not working on vite -> setup a jsconfig.json file
+
+**react-router-dom**
+
+creating routes via <RouterProvider router={router} />, for each route with children, put <Outlet /> in this very component
