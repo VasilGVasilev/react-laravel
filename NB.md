@@ -16,3 +16,13 @@ creating routes via <RouterProvider router={router} />, for each route with chil
 **debugger**
 
 simply putting debbuger keyword in code and running app in chrome will show you values in Sources when hovering
+
+**@keyframes trigger**
+If we wrapped the form so that we do not repeat the wrapping in each component Login, Signup, we lose the animation, because the animation triggers when actual element is re-rendered. In this current case, the re-rendering happens in the Outlet, namely, children Login and Signup components, thus, no actual trigger happens.
+``sh
+    <div className="login-signup-form animated fadeInDown">
+        <div className="form">
+            <Outlet />
+        </div>
+    </div>
+```
