@@ -3,6 +3,5 @@
 //         "module": "es6",
 //         "target": "es6"
 //     },
-//     "exclude": ["node_modules"]
 // }
 // this is problematic solution for auto import: <Navigate /> comes from a broken path

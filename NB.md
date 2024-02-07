@@ -19,10 +19,21 @@ simply putting debbuger keyword in code and running app in chrome will show you 
 
 **@keyframes trigger**
 If we wrapped the form so that we do not repeat the wrapping in each component Login, Signup, we lose the animation, because the animation triggers when actual element is re-rendered. In this current case, the re-rendering happens in the Outlet, namely, children Login and Signup components, thus, no actual trigger happens.
-``sh
+```sh
     <div className="login-signup-form animated fadeInDown">
         <div className="form">
             <Outlet />
         </div>
     </div>
 ```
+**axios instances**
+
+You can use them to create separate instances for each api, which in turn enables you to have configurations, interceptos, etc for each instance.
+Interceptors a special functions that will be executed before a request is sent or after the response is received.
+
+**.env**
+
+It is better to store urls in envs, in react/vite you have a specific protocol for env keys
+
+**refs vs changeState form approach**
+Instead of classic controlled form, apply refs to extract info on submit
