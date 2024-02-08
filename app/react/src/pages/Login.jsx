@@ -9,11 +9,9 @@ const Login = () => {
         <div className="login-signup-form animated fadeInDown">
             <div className="form">
                 <form onSubmit={onSubmit}>
-                    <h1 className="title">Login into your account</h1>
-                    <input placeholder="Full Name"/>
-                    <input type="email" placeholder="Email Address"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Password Confirmation"/>
+                    <h1 className="title">Sign up for free</h1>
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
                     <button className="btn btn-block">Login</button>
                     <p className="message">
                         Not Registered? <Link to={"/signup"}>Create an account</Link>

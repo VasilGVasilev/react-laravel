@@ -36,4 +36,4 @@ Interceptors a special functions that will be executed before a request is sent 
 It is better to store urls in envs, in react/vite you have a specific protocol for env keys
 
 **refs vs changeState form approach**
-Instead of classic controlled form, apply refs to extract info on submit
+Instead of classic controlled form, apply refs to extract info on submit 
