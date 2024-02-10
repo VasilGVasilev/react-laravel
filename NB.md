@@ -37,3 +37,39 @@ It is better to store urls in envs, in react/vite you have a specific protocol f
 
 **refs vs changeState form approach**
 Instead of classic controlled form, apply refs to extract info on submit 
+
+**controllers**
+In laravel API you have two types of controllers - simple 'closure' and complex 'controllers'
+
+Simple Closures
+```sh
+// routes/api.php
+Route::get('/products', function () {
+    $products = Product::all();
+    return response()->json($products);
+});
+
+```
+
+Complex Controllers
+```sh
+// routes/api.php
+Route::get('/products', 'ProductController@index');
+Route::post('/products', 'ProductController@store');
+Route::put('/products/{id}', 'ProductController@update');
+Route::delete('/products/{id}', 'ProductController@destroy');
+
+class ProductController extends Controller
+{
+    public function index()
+    {
+        // Fetch all products
+        $products = Product::all();
+        return response()->json($products);
+    }
+
+    // ... other methods for store, update, and destroy
+}
+```
+
+Mind that the only controllers you did in softuni backend app were equivalent to a closure (you called controllers what you here see in routes/api.php, but that is the routing logic, the controllers are the third element in the trio - method, route, controller). They are simply method, route and function to render. Controllers in their classical sense here, are stored in the http/controllers dir, they are more complex and it is in the routes/api.php where those controllers are actually attached to the coresponding method and route. 
