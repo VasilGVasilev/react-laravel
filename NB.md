@@ -73,3 +73,15 @@ class ProductController extends Controller
 ```
 
 Mind that the only controllers you did in softuni backend app were equivalent to a closure (you called controllers what you here see in routes/api.php, but that is the routing logic, the controllers are the third element in the trio - method, route, controller). They are simply method, route and function to render. Controllers in their classical sense here, are stored in the http/controllers dir, they are more complex and it is in the routes/api.php where those controllers are actually attached to the coresponding method and route. 
+
+**LoginRequest vs Request**
+When you use Request, you cannot limit your form request. But if you use Custom Form Request, you can make it flexible like what you want, you can validate, authorize, make rules, and custom error message, like LoginRequest.
+
+**Type-hinting**
+We pass in the custom type LoginRequest in front of the request instance $request
+```sh
+    public function login(LoginRequest $request)
+    {
+
+    }
+```
