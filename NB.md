@@ -77,7 +77,7 @@ Mind that the only controllers you did in softuni backend app were equivalent to
 **LoginRequest vs Request**
 When you use Request, you cannot limit your form request. But if you use Custom Form Request, you can make it flexible like what you want, you can validate, authorize, make rules, and custom error message, like LoginRequest.
 
-**Type-hinting**
+**Type-hinting and more**
 We pass in the custom type LoginRequest in front of the request instance $request
 ```sh
     public function login(LoginRequest $request)
@@ -85,3 +85,9 @@ We pass in the custom type LoginRequest in front of the request instance $reques
 
     }
 ```
+But LoginRequest does not only type-hint, it serves the purpose of request validation too. LoginRequest, it extends the Laravel\Foundation\Http\FormRequest class, which empowers you to perform request validation. By defining validation rules within the rules() method of your LoginRequest class, you can ensure that incoming login requests adhere to your specific requirements (e.g., email format, password length).
+
+**instead of dot notation php uses '->'**
+
+**we bcrypt password on the backend and laravel comes with bcrypt library**
+We bcrypt it on the backend with the risk of hijacking of password from client to server taken care of httpS protocol, otherwise, a frontend bcrypt would be even more dangerous.
