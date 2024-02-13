@@ -10,7 +10,7 @@ use Illuminate\Http\Request; //we can now inject the current HTTP request automa
 
 class AuthController extends Controller
 {
-    // var?
+    // var? tu understand declartaion
     public function login(LoginRequest $request)
     {
         $data = $request->validated();
